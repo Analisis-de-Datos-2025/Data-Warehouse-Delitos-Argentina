@@ -8,7 +8,35 @@
 
 **DATOS:** 
 Compuesto por 7 archivos de tipo CSV, correspondiendo un archivo por cada año de los delitos en la Ciudad de Buenos Aires.
-   **ATRIBUTOS:**
+**ATRIBUTOS:**
+   Dimensiones:
+   Dimensión Tiempo:  -Dia  -Mes - Anio
+   Dimension Tipo: -Tipo - Subtipo 
+   Dimensión Ubicación: -Barrio - Comuna - Latitud -Longitud
+   Dimensión Caracteristicas: -Uso_arma - Uso_moto 
+   
+   FACT_TABLE : 
+   Unión con dimensiones:
+   id_fact_delitos
+   id_dim_caracteristicas
+   id_dim_tiempo
+   id_dimTipo
+   id_dim_ubicacion
+   franja_horaria
+   
+   DIMENSION DEGENERADA: -Franja_horaria 
+   
+   MEDIDAS: 
+   Cantidad de delitos por comuna
+   Cantidad de delitos por año
+   Cantidad de delitos por mes
+   Cantidad de delitos dia
+   Cantidad de delitos por barrio
+   Cantidad de delitos segun tipo de delitos
+   Porcentaje de delitos segun tipo de delitos
+   Tasa de variacion mensual
+   Tasa de variacion anual
+   Frecuencia de delitos por franja horaria
 
 
 **Herramientas:** 
